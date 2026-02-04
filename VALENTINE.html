@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hey Rishabh ❤️</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive;
+    overflow: hidden;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 320px;
+  }
+
+  h1 {
+    color: #ff4d6d;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    position: relative;
+    height: 120px;
+  }
+
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  #yes {
+    background: #ff4d6d;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #no {
+    background: #ccc;
+    color: black;
+  }
+
+  .result {
+    display: none;
+  }
+
+  img {
+    width: 220px;
+    border-radius: 15px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card" id="question">
+  <h1>Rishuuuu❤️</h1> 
+<h1>A Quick Question!</h1>
+  <p>Will you be my Valentine?</p>
+
+  <div class="buttons">
+    <button id="yes">Yes ❤️</button>
+    <button id="no">No yes please😢</button>
+  </div>
+</div>
+
+<div class="card result" id="result">
+  <h1>YAYYYYY 🥰🐶</h1>
+  <p>Yeahhh Rishabh! I knew it 🤍</p>
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWEyMDh1YjhscThqOHMybHI2cHVoaDEzMGU0MHVrbWpicG9sbmJlYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IzXiddo2twMmdmU8Lv/giphy.gif" alt="Dog Hug">
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  const yesBtn = document.getElementById("yes");
+  const question = document.getElementById("question");
+  const result = document.getElementById("result");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 250;
+    const y = Math.random() * 80;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+    noBtn.innerHTML = "😢";
+  });
+
+  yesBtn.addEventListener("click", () => {
+    question.style.display = "none";
+    result.style.display = "block";
+  });
+</script>
+
+</body>
+</html>
